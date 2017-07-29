@@ -19,6 +19,8 @@ if(have_posts()){
                         <i class="fa fa-user fa-fw"></i> <?php the_author_posts_link(); ?></span>
                     <span class="post-date">
                         <i class="fa fa-calendar fa-fw"></i> <?php the_time('F j, Y'); ?></span>
+                    <span class="post-time">
+                        <i class="fa fa-clock-o fa-fw"></i> <?php the_time('g:i a'); ?></span>
                     <span class="post-comment">
                         <i class="fa fa-comment-o fa-fw"></i> <?php comments_popup_link('No Comments','1 Comment','% Comments',none,'Comments Off'); ?></span>
                     <?php if(has_post_thumbnail()){
@@ -44,6 +46,7 @@ if(have_posts()){
                 </div>
             </div>
 
+
             <?php
 
     }//end while
@@ -66,6 +69,7 @@ if(have_posts()){
 ?>
 
     </div>
+
 </div>
 
 <?php get_footer(); ?>
