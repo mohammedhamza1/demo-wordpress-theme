@@ -6,7 +6,7 @@
     <?php
 if(have_posts()){
     while(have_posts()){
-        the_post();
+       the_post();
         ?>
 
         <div class="main-post single-post">
@@ -16,10 +16,10 @@ if(have_posts()){
                     <?php the_title(); ?>
                 </a>
             </h3>
-            <span class="post-auther">
-                        <i class="fa fa-user fa-fw"></i> <?php the_author_posts_link(); ?></span>
             <span class="post-date">
                         <i class="fa fa-calendar fa-fw"></i> <?php the_time('F j, Y'); ?></span>
+            <span class="post-time">
+                        <i class="fa fa-clock-o fa-fw"></i> <?php the_time('g:i a'); ?></span>
             <span class="post-comment">
                         <i class="fa fa-comment-o fa-fw"></i> <?php comments_popup_link('No Comments','1 Comment','% Comments',none,'Comments Off'); ?></span>
 
@@ -48,7 +48,7 @@ if(have_posts()){
         </div>
 
         <!-- get the author information -->
-
+        <hr class="comments-seperator">
         <div class="row">
             <div class="col-sm-2">
                 <?php 
@@ -59,14 +59,21 @@ if(have_posts()){
 
                 echo get_avatar(get_the_author_meta('id'),110,'','auther avatar',$avatar_arguments);
                 ?>
+                <!--display author page -->
+                <button type="button" class="btn btn-danger center-block"><?php the_author_posts_link(); ?></button>
+
             </div>
             <!-- end col -->
             <div class="col-sm-10 author-info">
                 <h4>
                     <?php the_author_meta('first_name') ?>
-                    <?php the_author_meta('last_name') ?> (
-                    <span><?php the_author_meta('nickname') ?></span> )
+                    <?php the_author_meta('last_name') ?>
                 </h4>
+                <!--display number of posts -->
+                <p class="auther-stats pull-right">
+                    Posts Number: <span class="posts-count label label-danger"><?php echo count_user_posts(get_the_author_meta('id')) ?></span>
+                </p>
+
                 <?php
             //check if the author has description
             if(get_the_author_meta('description')){?>
@@ -75,12 +82,13 @@ if(have_posts()){
                     </p>
                     <?php
             }else{
-                echo 'No discription to this author';
+                echo '<span class="no-bio">No discription to this author</span>';
             }?>
             </div>
             <!-- end col -->
         </div>
         <!-- end row-->
+
 
         <?php
 

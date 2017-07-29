@@ -63,7 +63,12 @@ function demo_bootstrap_nav_menu(){
 **  function to custome excerpt length 
 */
 function demo_excerpt_enhance($length){
-    return 20;
+    if(is_author()){
+        return 15;
+    }else{
+         return 30;
+    }
+   
 }
 /*
 **  function to custome excerpt read more 
