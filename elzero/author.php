@@ -21,7 +21,7 @@
                 <div class="row stats">
                     <div class="col-sm-3">
                         <div class="author-stats">
-                            Posts Number:
+                            Posts Number
                             <span class="label label-info"><?php echo count_user_posts(get_the_author_meta('id')) ?>
                             </span>
                         </div>
@@ -29,7 +29,7 @@
                     <!-- end col -->
                     <div class="col-sm-3">
                         <div class="author-stats">
-                            comments count:
+                            comments count
                             <span class="label label-info">
                                <?php 
                                 $commentscount_arguments = array(
@@ -43,14 +43,14 @@
                     <!-- end col -->
                     <div class="col-sm-3">
                         <div class="author-stats">
-                            total posts view:
+                            total posts view
                             <span class="label label-info">0</span>
                         </div>
                     </div>
                     <!-- end col -->
                     <div class="col-sm-3">
                         <div class="author-stats">
-                            testing:
+                            testing
                             <span class="label label-info">0</span>
                         </div>
                     </div>
