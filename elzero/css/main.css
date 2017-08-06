@@ -145,13 +145,26 @@ body {
 
 /* start author info */
 
-.row button {
+.post-author {
+    background-color: #fff;
+    margin: 0;
+    padding-right: 15px;
+    border: solid 1px #ddd;
+    border-radius: 10px;
+}
+
+.post-author img {
+    margin-top: 10px;
+}
+
+.post-author button {
     margin-top: 10px;
     min-width: 100px;
     min-width: 110px;
+    margin-bottom: 10px;
 }
 
-.row button a {
+.post-author button a {
     color: #fff;
 }
 
