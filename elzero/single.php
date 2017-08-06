@@ -49,9 +49,10 @@ if(have_posts()){
 
         <!-- get the author information -->
         <hr class="comments-seperator">
-        <div class="row">
-            <div class="col-sm-2">
-                <?php 
+        <div class="post-author">
+            <div class="row">
+                <div class="col-sm-2">
+                    <?php 
                 // display avatar with some options 
                 $avatar_arguments = array(
                 'class' => 'img-responsive img-thumbnail center-block'
@@ -59,35 +60,36 @@ if(have_posts()){
 
                 echo get_avatar(get_the_author_meta('id'),110,'','auther avatar',$avatar_arguments);
                 ?>
-                <!--display author page -->
-                <button type="button" class="btn btn-danger center-block"><?php the_author_posts_link(); ?></button>
+                    <!--display author page -->
+                    <button type="button" class="btn btn-danger center-block"><?php the_author_posts_link(); ?></button>
 
-            </div>
-            <!-- end col -->
-            <div class="col-sm-10 author-info">
-                <h4>
-                    <?php the_author_meta('first_name') ?>
-                    <?php the_author_meta('last_name') ?>
-                </h4>
-                <!--display number of posts -->
-                <p class="auther-stats pull-right">
-                    Posts Number: <span class="posts-count label label-danger"><?php echo count_user_posts(get_the_author_meta('id')) ?></span>
-                </p>
+                </div>
+                <!-- end col -->
+                <div class="col-sm-10 author-info">
+                    <h4>
+                        <?php the_author_meta('first_name') ?>
+                        <?php the_author_meta('last_name') ?>
+                    </h4>
+                    <!--display number of posts -->
+                    <p class="auther-stats pull-right">
+                        Posts Number: <span class="posts-count label label-danger"><?php echo count_user_posts(get_the_author_meta('id')) ?></span>
+                    </p>
 
-                <?php
+                    <?php
             //check if the author has description
             if(get_the_author_meta('description')){?>
-                    <p>
-                        <?php the_author_meta('description') ?>
-                    </p>
-                    <?php
+                        <p>
+                            <?php the_author_meta('description') ?>
+                        </p>
+                        <?php
             }else{
                 echo '<span class="no-bio">No discription to this author</span>';
             }?>
+                </div>
+                <!-- end col -->
             </div>
-            <!-- end col -->
+            <!-- end row-->
         </div>
-        <!-- end row-->
 
 
         <?php
