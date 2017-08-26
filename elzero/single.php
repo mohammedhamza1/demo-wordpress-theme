@@ -10,7 +10,9 @@ if(have_posts()){
         ?>
 
         <div class="main-post single-post">
+            <button type="button" class="btn btn-primary post-edit">
             <?php edit_post_link('Edit <i class="fa fa-pencil" aria-hidden="true"></i>'); ?>
+            </button>
             <h3 class="post-title">
                 <a href="<?php the_permalink(); ?>">
                     <?php the_title(); ?>

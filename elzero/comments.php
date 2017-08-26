@@ -5,8 +5,6 @@
     <?php comments_number('0 Comments','1 Comment','% Comments'); ?>
 </h3>
 
-
-
 <?php
         //display comments
         echo '<ul class="comments-list list-unstyled">';
@@ -40,7 +38,11 @@
         
         comment_form($commentform_arguments);
     }else{
-        echo 'No comments to display';
+        ?>
+    <h3 class="comments-off">
+        <?php echo 'No comments to display'; ?>
+    </h3>
+    <?php
     }
 
 ?>

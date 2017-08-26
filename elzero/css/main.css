@@ -46,8 +46,10 @@ body {
 
 .home-page .main-post .post-auther,
 .home-page .main-post .post-date,
-.home-page .main-post .post-comment {
+.home-page .main-post .post-comment,
+.home-page .main-post .post-time {
     font-size: 12px;
+    color: #888;
 }
 
 .home-page .main-post img {
@@ -92,17 +94,27 @@ body {
 
 /* start single post */
 
-.post-page .main-post .post-edit-link {
+.post-page .main-post .post-edit {
     position: absolute;
-    top: 0;
     border: 2px solid #f7f6f6;
-    right: 0;
-    background-color: #eee;
-    padding: 5px;
+    right: 15px;
+    padding: 4px 4px;
+    color: #337ab7;
+    outline: none;
+    cursor: auto;
 }
 
-.post-page .main-post .post-edit-link i {
-    color: #737eb5;
+.post-page .main-post .post-edit:focus,
+.post-page .main-post .post-edit:hover {
+    background-color: #337ab7;
+}
+
+.post-page .main-post .post-edit .post-edit-link {
+    color: #fff;
+}
+
+.post-page .main-post .post-edit .post-edit-link i {
+    color: #fff;
     margin-left: 5px;
 }
 
@@ -239,7 +251,8 @@ body {
     border-radius: 10px;
 }
 
-.comments-count {
+.comments-count,
+.comments-off {
     padding: 20px;
     margin-top: 0px;
     background-color: #ddd;
@@ -449,32 +462,31 @@ body {
     color: #888;
 }
 
+.author-posts .post-time {
+    color: #888;
+}
+
 .author-posts .post-content {
     color: #777;
     margin-top: 15px;
 }
 
-.post-pagination {
-    margin: 20px auto 30px;
-    width: 400px;
-}
-
-.post-pagination a,
-.post-pagination span {
-    display: inline-block;
-    padding: 10px 20px;
+.author-comments {
     background-color: #fff;
-    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 1px 0 10px 25px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
 }
 
-.post-pagination span {
-    opacity: .5;
-    cursor: not-allowed;
+.author-comments .comment-date,
+.author-comments .comment-time {
+    color: #888;
 }
 
-.post-pagination a:first-of-type,
-.post-pagination span:first-of-type {
-    margin-right: 20px;
+.author-comments .comment-content {
+    color: #777;
+    margin-top: 15px;
 }
 
 

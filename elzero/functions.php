@@ -13,7 +13,7 @@ add_theme_support( 'post-thumbnails' );
 function demo_add_styles(){
     wp_enqueue_style('bootstrap-css',get_template_directory_uri().'/css/bootstrap.min.css');
     wp_enqueue_style('fontawesome-css',get_template_directory_uri().'/css/font-awesome.min.css');
-    wp_enqueue_style('main-css',get_template_directory_uri().'/css/main.css');
+    wp_enqueue_style('main-css',get_template_directory_uri().'/css/main.css',array(),'4.8.1');
 }
 /*
 **  function to add my scripts
