@@ -154,6 +154,36 @@ body {
     color: #999;
 }
 
+.random-posts {
+    background-color: #fff;
+    padding: 0 30px 10px;
+    margin-bottom: 30px;
+    border: solid 1px #ddd;
+    border-radius: 10px;
+}
+
+.random-posts h2 {
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 20px;
+    border-bottom: solid;
+    display: inline-block;
+    color: #999;
+}
+
+.random-posts .only-post-in-cat {
+    font-size: 30px;
+    font-weight: bold;
+    color: #999;
+    padding-top: 31px;
+    min-height: 100px;
+}
+
+.random-posts .only-post-in-cat strong {
+    color: #d9534f;
+    text-transform: uppercase;
+}
+
 
 /* start author info */
 
@@ -180,7 +210,7 @@ body {
     color: #fff;
 }
 
-.author-info h4 {
+.post-author .author-info h4 {
     font-weight: bold;
     color: #6f6c6c;
     font-size: 20px;
@@ -188,27 +218,27 @@ body {
     display: inline-block;
 }
 
-.author-info h4 span {
+.post-author .author-info h4 span {
     color: #d9534f;
 }
 
-.author-info .auther-stats {
+.post-author .author-info .auther-stats {
     color: #0c0b0b;
     margin: 18px 0 15px;
     display: inline-block;
 }
 
-.author-info .auther-stats .posts-count {
+.post-author .author-info .auther-stats .posts-count {
     color: #fff;
 }
 
-.author-info p {
+.post-author .author-info p {
     font-size: 16px;
     color: #777;
     line-height: 1.5;
 }
 
-.author-info .no-bio {
+.post-author .author-info .no-bio {
     display: block;
     margin-top: 15px;
 }
