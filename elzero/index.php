@@ -70,13 +70,20 @@ if(have_posts()){
         echo '</div>';
         
      */
-   
-       echo numbering_pagination();
+        ?>
+                <div class="col-md-12">
+                    <div class="numbering-pagination">
+                        <?php echo numbering_pagination(); ?>
+                    </div>
+                </div>
 
-?>
+
+
 
     </div>
-
+    <!--end row -->
 </div>
+<!--end container -->
 
-<?php //get_footer(); ?>
+
+<?php get_footer(); ?>
