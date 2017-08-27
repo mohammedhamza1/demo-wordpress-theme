@@ -35,6 +35,7 @@ body {
     padding: 20px;
     margin-bottom: 10px;
     border-radius: 10px;
+    min-height: 676.44px;
 }
 
 .home-page .main-post h3 {
@@ -59,12 +60,15 @@ body {
 
 .home-page .main-post .post-content {
     color: #888;
+    min-height: 116px;
 }
 
 .home-page .main-post i {
     color: #999;
 }
 
+
+/*
 .home-page .post-pagination {
     margin: 20px auto 30px;
     width: 400px;
@@ -86,6 +90,31 @@ body {
 .home-page .post-pagination a:first-of-type,
 .home-page .post-pagination span:first-of-type {
     margin-right: 20px;
+}
+*/
+
+.home-page .numbering-pagination {
+    margin: 15px 0;
+    padding: 15px;
+}
+
+.home-page .numbering-pagination .page-numbers {
+    background-color: #fff;
+    color: #000;
+    margin: 0 5px;
+    padding: 5px 10px;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.home-page .numbering-pagination .page-numbers:hover {
+    background-color: #d9534f;
+    color: #fff;
+}
+
+.home-page .numbering-pagination .page-numbers.current {
+    background-color: #d9534f;
+    color: #fff;
 }
 
 
@@ -179,9 +208,10 @@ body {
     min-height: 100px;
 }
 
-.random-posts .only-post-in-cat strong {
+.random-posts .only-post-in-cat span {
     color: #d9534f;
-    text-transform: uppercase;
+    display: block;
+    font-weight: bold;
 }
 
 
