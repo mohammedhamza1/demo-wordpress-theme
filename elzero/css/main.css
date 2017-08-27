@@ -100,9 +100,10 @@ body {
 
 .home-page .numbering-pagination .page-numbers {
     background-color: #fff;
-    color: #000;
+    color: #337ab7;
     margin: 0 5px;
     padding: 5px 10px;
+    font-weight: bold;
     -webkit-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
 }
