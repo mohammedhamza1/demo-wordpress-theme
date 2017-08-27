@@ -51,7 +51,9 @@ if(have_posts()){
 
     }//end while
 }//end if
-          
+        
+     /* 
+     
         // pagination system
         echo '<div class="clearfix"></div>';
         echo '<div class="post-pagination text-center">';
@@ -66,10 +68,15 @@ if(have_posts()){
             echo '<span>next</span>'; 
         }
         echo '</div>';
+        
+     */
+   
+       echo numbering_pagination();
+
 ?>
 
     </div>
 
 </div>
 
-<?php get_footer(); ?>
+<?php //get_footer(); ?>
