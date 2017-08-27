@@ -24,8 +24,16 @@ if(have_posts()){
                     <span class="post-comment">
                         <i class="fa fa-comment-o fa-fw"></i> <?php comments_popup_link('No Comments','1 Comment','% Comments',none,'Comments Off'); ?></span>
                     <?php if(has_post_thumbnail()){
+            
                         the_post_thumbnail('',['class' => 'img-responsive img-thumbnail', 'title' => 'post image']);
-                      } ?>
+            
+                      } else{?>
+
+                    <div class="no-thumbnail text-center" title="No thumbnail">
+                        No feature photo for this post
+                    </div>
+
+                    <?php } ?>
                     <div class="lead post-content">
                         <?php //the_content('continue reading'); ?>
                         <?php the_excerpt() ?>
