@@ -13,7 +13,7 @@ add_theme_support( 'post-thumbnails' );
 function demo_add_styles(){
     wp_enqueue_style('bootstrap-css',get_template_directory_uri().'/css/bootstrap.min.css');
     wp_enqueue_style('fontawesome-css',get_template_directory_uri().'/css/font-awesome.min.css');
-    wp_enqueue_style('main-css',get_template_directory_uri().'/css/main.css');
+    wp_enqueue_style('main-css',get_template_directory_uri().'/css/main.css',array(),'4.8.1');
 }
 /*
 **  function to add my scripts
@@ -75,6 +75,27 @@ function demo_excerpt_enhance($length){
 */
 function demo_excerpt_more($more){
     return ' ...';
+}
+
+/*
+** numbering pagination
+*/
+function numbering_pagination(){
+    /*
+    global $wp_query; // wp_query global
+    $all_pages = $wp_query->$max_num_pages; //get all pages
+    $current_page = max(1,get_query_var('paged')); // get current page
+    
+    if($all_pages > 1){
+       $args = array(
+        	'base'               => get_pagenum_link().'%_%',
+            'format'             => 'paged/%#%',
+            'current'            => $current_page,
+        );
+    }*/
+    
+       return paginate_links();
+
 }
 
 
